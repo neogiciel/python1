@@ -1,0 +1,16 @@
+Pour lancer le programme
+> python -m flask run
+Aller ensuite sur l url localhost:5000
+
+Lancer le build
+docker build --tag python-docker .
+
+Liste les images
+docker images
+
+Supprimer les images (powerShel)
+docker images -a -q | % { docker image rm $_ -f }
+
+Lancer le programme
+docker run -p 8000:5000 python-docker
+
